@@ -28,12 +28,14 @@ h2 {
 /**SECTIONS**/
 .top {
 	height: 100%;
-	padding: 1em 2em;
+	padding: .5em 2em;
 	background-color: rgba(0,0,0,.8);
 	color: #ffffff;
 	float: left;
 	position: fixed;
-}
+-webkit-box-shadow: 10px 0px 25px 0px rgba(16,10,28,1);
+-moz-box-shadow: 10px 0px 25px 0px rgba(16,10,28,1);
+box-shadow: 10px 0px 25px 0px rgba(16,10,28,1);}
 
 header {
 
@@ -44,8 +46,8 @@ nav {
 }
 
 section {
-	padding: .5em;
-	margin-left: 25%;
+	padding: .5em 2em;
+	margin-left: 27%;
 	margin-right: 5%
 }
 
