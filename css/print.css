@@ -17,8 +17,8 @@ body {
 }
 
 #myname {
-	font-size: 40px;
-	font-weight: bold;
+	border-style: none;
+	font-size: 35px;
 }
 
 section {

@@ -3,31 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<title>My Resume</title>
+		<link href="{{site.baseurl}}/css/style.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>
 				<h1>Maria Deslis</h1>
-				<nav>
-					<ul>
-						<li><a href="{{site.baseurl}}/index.html">Home</a></li>
-						<li><a href="{{site.baseurl}}/test.html">Test</a></li>
-					</ul>
-				</nav>
+				{% include nav.html %}
 		</header>
 		<div class="wrapper">
 			<section>
 				{{content}}
 			</section>
-			<article>
-				<ul>
-					<li>Maria Deslis</li>
-					<li><a href="https://github.com/eternalearth888" target="_blank">github.com/eternalearth888</a></li>
-					<li><a href="mailto:mdeslis@gmail.com">mdeslis@gmail.com</a></li>
-				</ul>
-			</article>
+			{% include article.html %}	
 		</div>
 		<footer>
-			Footer
+			&copy; 2014 <strong>Maria Deslis</strong>
 		</footer>
 	</body>
 </html>
