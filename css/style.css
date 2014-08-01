@@ -27,9 +27,11 @@ h2 {
 
 /**SECTIONS**/
 .top {
+	height: auto;
 	padding: 1em 2em;
 	background-color: rgba(0,0,0,.8);
 	color: #ffffff;
+	width: 15%;
 }
 
 header {
@@ -63,10 +65,10 @@ nav ul{
 	height: auto;
 	padding: .5em 0em;
 	margin: 0;
+	list-style-type: none;
 }
 
 nav li{
-	display: inline;
 	padding: .2em;
 }
 
