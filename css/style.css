@@ -27,11 +27,12 @@ h2 {
 
 /**SECTIONS**/
 .top {
-	height: auto;
+	height: 100%;
 	padding: 1em 2em;
 	background-color: rgba(0,0,0,.8);
 	color: #ffffff;
-	width: 15%;
+	float: left;
+	position: fixed;
 }
 
 header {
@@ -43,10 +44,9 @@ nav {
 }
 
 section {
-	margin: auto;
-	width: 80%;
-	min-width: 600px;
 	padding: .5em;
+	margin-left: 25%;
+	margin-right: 5%
 }
 
 article {
