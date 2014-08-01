@@ -80,6 +80,8 @@ table {
 }
 
 #colored {
+	font-size: 15px;
+	font-weight: bold;
 	background-color: #9685BA;
 }
 
