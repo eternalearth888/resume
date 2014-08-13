@@ -5,7 +5,11 @@ html, body {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #FBD4A1;
+	background: url(../images/bg.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 	color: #1a1a1a;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
@@ -28,7 +32,7 @@ h2 {
 
 /**SECTIONS**/
 .top {
-	background-color: #454777;
+	background-color: rgba(69,71,119, 1);
 	padding: .1em;
 }
 
@@ -46,7 +50,7 @@ article {
 }
 
 section {
-	background-color: #FAF4F4;
+	background-color: rgba(250,244,244,.8);
 	width: 640px;
 	min-height: 100%;
 	margin: auto;
@@ -149,8 +153,6 @@ a:hover, a:focus, a:active {
 
 a:link img, a:visited img {
     opacity: 0.8;
-    filter: gray;
-    -webkit-filter: grayscale(1)
     filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 
