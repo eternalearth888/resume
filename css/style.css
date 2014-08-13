@@ -16,7 +16,7 @@ h1 {
 	font-size: 50px;
 	vertical-align: middle;
 	text-indent: .5em;
-	color: #fff;
+	color: #FBD4A1;
 }
 
 h2 {
@@ -28,7 +28,7 @@ h2 {
 
 /**SECTIONS**/
 .top {
-	background-color: #31384D;
+	background-color: #454777;
 	padding: .1em;
 }
 
@@ -46,7 +46,7 @@ article {
 }
 
 section {
-	background-color: #D3BBBE;
+	background-color: #FAF4F4;
 	width: 640px;
 	min-height: 100%;
 	margin: auto;
@@ -134,18 +134,18 @@ tbody {
 a:link { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #F5579E;
+	color: #F3779A;
 }
 
 a:visited { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #F5579E;
+	color: #F3779A;
 }
 
 a:hover, a:focus, a:active { 
 	font-weight: bold;
-	color: #F4CBEC;
+	color: #F3CBD0;
 }
 
 a:link img, a:visited img {
