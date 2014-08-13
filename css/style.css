@@ -5,7 +5,7 @@ html, body {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #A47163;
+	background-color: #FBD4A1;
 	color: #1a1a1a;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
@@ -99,8 +99,8 @@ table td {
 	font-size: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
-	background-color: #31384D;
-	color: #FFF;
+	background-color: #454777;
+	color: #FBD4A1;
 }
 
 tbody {
