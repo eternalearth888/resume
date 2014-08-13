@@ -8,57 +8,97 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #F5F4EB;
+	background: url(images/background.png) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	background-size: cover;
 	color: #1a1a1a;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 /**HEADERS & CONTENT**/
 h1 {
-	font-size: 40px;
 	font-weight: bold;
+	float: left;
+	font-size: 50px;
 }
 
 h2 {
 	text-transform: uppercase;
 	border-style: none none double none;
-	margin: .1em 0;
+	margin: .1em  .5em;
+	text-align: justify;
+	text-indent: 1em;
+	padding: .2em;
 }
 
 /**SECTIONS**/
 .top {
-	height: 100%;
 	padding: .5em 2em;
-	background-color: rgba(0,0,0,.8);
+	background-color: transparent;
 	color: #ffffff;
-	float: left;
-	position: fixed;
--webkit-box-shadow: 10px 0px 25px 0px rgba(16,10,28,1);
--moz-box-shadow: 10px 0px 25px 0px rgba(16,10,28,1);
-box-shadow: 10px 0px 25px 0px rgba(16,10,28,1);}
+}
 
 header {
+	vertical-align: top;
+	width: 100%;
+	display: inline-block;
+}
 
+header img {
+	float: right;
+	width: 36px;
+	margin-top: 3.2em;
+	margin-right: .5em;
+	margin-left: .5em;
+	height: 36px;
 }
 
 nav {
 	width: 100%;
-}
-
-section {
-	padding: .5em 2em;
-	margin-left: 32%;
-	margin-right: 1%
+	text-align: right;
 }
 
 article {
+	overflow: auto;
+	margin: 1em 1em 2em 1em;
+	padding: .5em;
+}
+
+section {
 	width: 800px;
 	margin: auto;
 }
 
-p {
-	text-align: justify;
+
+#avatar {
+	clear: both;
+	float: left;
+	margin: 1em;
+	border-radius: 5em;
 }
+
+
+.TextWrapRight {
+	clear: left;
+	float: right;
+	text-align: justify;
+	text-indent: 1em;
+	margin: 1em;
+	padding: .2em;
+}
+
+
+p {
+	clear: both;
+	vertical-align: top;
+	text-align: justify;
+	text-indent: 1em;
+	margin: 1em;
+	padding: .2em;
+}
+
 
 /**NAV UL**/
 nav ul{
@@ -70,6 +110,7 @@ nav ul{
 
 nav li{
 	padding: .2em;
+	display: inline-block;
 }
 
 /**TABLE STUFF**/
@@ -121,10 +162,22 @@ a:link {
 a:visited { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #D4CDDC;
+	color: #B7A5DF;
 }
 
 a:hover, a:focus, a:active { 
 	text-decoration: underline; 
 	color: #9685BA;
+}
+
+a:link img, a:visited img {
+    opacity: 0.8;
+    filter: gray;
+    -webkit-filter: grayscale(1)
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+a:hover img, a:focus img, a:active img {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
 }

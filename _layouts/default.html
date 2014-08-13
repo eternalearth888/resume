@@ -6,23 +6,18 @@
 		<link href="{{site.baseurl}}/css/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="top">
-			<header>
-				<h1>Maria Deslis</h1>
-				<ul>
-					<li>
-						<a href="https://github.com/eternalearth888" target="_blank">github.com/eternalearth888</a>
-					</li>
-					<li>
-						<a href="mailto:mdeslis@gmail.com">mdeslis@gmail.com</a>
-					</li>
-				</ul>
-			</header>
-			<hr />
-			{% include nav.html %}
-		</div>
 		<section>
-			{{content}}
+			<div class="top">
+				<header>
+					<h1>Maria Deslis</h1>
+					<a href="https://github.com/eternalearth888" target="_blank"><img src="{{site.baseurl}}/images/github.png" alt="github.com/eternalearth888"</a>
+					<a href="mailto:mdeslis@gmail.com"><img src="{{site.baseurl}}/images/gmail.png" alt="Email me!"></a>
+				</header>
+				{% include nav.html %}
+			</div>
+			<article>
+				{{content}}
+			</article>
 		</section>
 	</body>
 </html>
