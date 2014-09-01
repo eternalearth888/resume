@@ -27,6 +27,13 @@ h2 {
 	text-align: right;
 }
 
+h3 {
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
 /**SECTIONS**/
 .top {
 	background-color: rgba(69,71,119, 1);
@@ -79,22 +86,6 @@ nav img {
 }
 
 /**TABLE STUFF**/
-
-h1 {
-	vertical-align: middle;
-	text-transform: uppercase;
-	font-size: 40px;
-	margin: 0;
-	padding: 0;
-}
-
-h2 {
-	font-size: 15px;
-	font-weight: normal;
-	margin: 0;
-	padding: 0;
-}
-
 table {
 	width: 100%;
 	border-collapse: collapse;
