@@ -90,48 +90,70 @@ nav img {
 
 /**TABLE STUFF**/
 
-table {
-	border-collapse: collapse;
-	width: 100%;
+h1 {
+	vertical-align: middle;
+	text-transform: uppercase;
+	font-size: 40px;
+	margin: 0;
+	padding: 0;
 }
 
-table td {
-	padding: .5em;
-}
-
-#colored {
+h2 {
 	font-size: 15px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+thead {
+	background-color: #EEA985;
 	text-transform: uppercase;
+	font-size: 15px;
 	font-weight: bold;
-	background-color: #454777;
-	color: #FBD4A1;
+	border-bottom: 1px solid black;
 }
 
-tbody {
+tr {
+	padding: 0;
+}
+
+td {
 	vertical-align: top;
-	font-size: 12px;
 }
 
-#date {
-	font-style: italic;
+.sub {
+	background-color: #EDD7B5;
+}
+
+.right {
 	text-align: right;
-	width: 200px;
+	font-style: italic;
+	vertical-align: middle;
 }
 
-#titleC {
-	text-align: center;
-	text-transform: uppercase;
-}
-
-
-#titleL {
+.left {
 	text-align: left;
 }
 
-#right {
-	text-align: right;
+.center {
+	text-align: center;
 	vertical-align: middle;
+	font-weight: bold;
+	text-transform: uppercase;
 }
+
+ul {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: .4em;
+	margin-bottom: .4em;
+}
+
 
 /**LINKS**/
 a:link { 

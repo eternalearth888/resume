@@ -62,6 +62,7 @@ td {
 .right {
 	text-align: right;
 	font-style: italic;
+	vertical-align: middle;
 }
 
 .left {
