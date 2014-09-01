@@ -42,7 +42,12 @@ h3 {
 	padding: .1em;
 }
 
-header,nav {
+header {
+	width: 100%;
+	margin:0;
+}
+
+nav {
 	width: 100%;
 }
 
