@@ -10,7 +10,7 @@ body {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	color: #1a1a1a;
+	color: #31384D;
 	font-size: 15px;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
@@ -21,13 +21,10 @@ h1 {
 	font-size: 50px;
 	vertical-align: middle;
 	text-indent: .5em;
-	color: #FBD4A1;
 }
 
 h2 {
 	text-align: right;
-	margin: 0;
-	padding: 0;
 }
 
 h3 {
@@ -38,7 +35,7 @@ h3 {
 
 /**SECTIONS**/
 .top {
-	background-color: rgba(69,71,119, 1);
+	background-color: #A47163;
 	padding: .1em;
 }
 
@@ -57,7 +54,7 @@ article {
 }
 
 section {
-	background-color: rgba(250,244,244,.9);
+	background-color: #D3BBBE;
 	width: 650px;
 	min-height: 100%;
 	margin: auto;
@@ -100,7 +97,7 @@ table {
 }
 
 thead {
-	background-color: #EEA985;
+	background-color: #F5579E;
 	text-transform: uppercase;
 	font-size: 15px;
 	font-weight: bold;
@@ -112,7 +109,7 @@ td {
 }
 
 .sub {
-	background-color: #EDD7B5;
+	background-color: #F4CBEC;
 }
 
 .right {
