@@ -11,6 +11,7 @@ body {
   	-o-background-size: cover;
   	background-size: cover;
 	color: #1a1a1a;
+	font-size: 12px;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
@@ -25,7 +26,6 @@ h1 {
 
 h2 {
 	text-align: right;
-	font-size: 25px;
 	margin: 0;
 	padding: 0;
 }
