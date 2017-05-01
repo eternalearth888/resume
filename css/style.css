@@ -71,8 +71,9 @@ section {
 
 #cat {
 	margin: 1em;
+	margin-top: 2em;
 	float: right;
-	border-radius: 5em;
+	border-radius: 2.5em;
 	width: 150px;
 }
 
