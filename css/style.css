@@ -139,6 +139,10 @@ ul {
 	margin-bottom: .4em;
 }
 
+.nav-right {
+	margin-left: .5em;
+}
+
 
 /**LINKS**/
 a:link { 
