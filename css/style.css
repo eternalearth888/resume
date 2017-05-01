@@ -69,6 +69,14 @@ section {
 	width: 150px;
 }
 
+#cat {
+	margin: 1em;
+	float: right;
+	border-radius: 5em;
+	width: 150px;
+}
+
+
 p {
 	vertical-align: top;
 	text-align: justify;
