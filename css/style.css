@@ -36,7 +36,7 @@ h3 {
 
 /**SECTIONS**/
 .top {
-	color: #F2E79B;
+	color: #79B8A2;
 	background-color: #31384D;
 	padding: .1em;
 }
@@ -114,6 +114,8 @@ thead {
 	font-size: 20px;
 	font-weight: bold;
 	border-bottom: 1px solid black;
+	border-top-right-radius: 2em;
+	border-top-left-radius: 2em;
 }
 
 td {
