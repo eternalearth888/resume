@@ -127,6 +127,7 @@ td {
 
 .right {
 	text-align: right;
+	margin-right: 1em;
 	font-style: italic;
 	vertical-align: middle;
 }
