@@ -150,7 +150,7 @@ ul {
 }
 
 .nav-right {
-	margin-left: 12em;
+	margin-left: 14em;
 }
 
 
@@ -158,18 +158,18 @@ ul {
 a:link { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #8F543D;
+	color: #79B8A2;
 }
 
 a:visited { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #8F543D;
+	color: #79B8A2;
 }
 
 a:hover, a:focus, a:active { 
 	font-weight: bold;
-	color: #A47163;
+	color: #A8DBCD;
 }
 
 a:link img, a:visited img {
