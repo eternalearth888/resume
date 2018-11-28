@@ -34,6 +34,13 @@ h3 {
 	border-style: none none double none;
 }
 
+h4 {
+	font-weight: bold;
+	font-size: 10px;
+	vertical-align: middle;
+	text-indent: .5em;
+}
+
 /**SECTIONS**/
 .top {
 	color: #ac644c;
