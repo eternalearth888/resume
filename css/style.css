@@ -145,17 +145,19 @@ td {
 	background-color: #d2c7c4;
 }
 
+tr {
+	background-color: #bdb3b0;
+}
+
 .right {
 	text-align: right;
 	margin-right: 1em;
 	font-style: italic;
 	vertical-align: middle;
-	background-color: #bdb3b0;
 }
 
 .left {
 	text-align: left;
-	background-color: #bdb3b0;
 }
 
 .center {
