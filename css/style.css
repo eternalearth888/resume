@@ -43,7 +43,7 @@ h4 {
 
 /**SECTIONS**/
 .top {
-	color: #70b593;
+	color: #F5579E;
 	background-color: #22444c;
 	padding: .1em;
 }
@@ -189,18 +189,18 @@ ul {
 a:link { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #ac644c;
+	color: #70b593;
 }
 
 a:visited { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #ac644c;
+	color: #70b593;
 }
 
 a:hover, a:focus, a:active { 
 	font-weight: bold;
-	color: #ac644c;
+	color: #70b593;
 }
 
 a:link img, a:visited img {
