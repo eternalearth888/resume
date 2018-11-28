@@ -186,22 +186,57 @@ ul {
 }
 
 
+/**NAV LINKS**/
+nav a:link {
+	font-weight: bold;
+	text-decoration: none;
+	color: #F4CBEC;
+}
+
+nav a:visited {
+	font-weight: bold;
+	text-decoration: none;
+	color: #F4CBEC;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+	font-weight: bold;
+	color: #F4CBEC;
+}
+
+nav a:link img,
+a:visited img {
+	opacity: 0.8;
+	filter: alpha(opacity=40);
+	/* For IE8 and earlier */
+}
+
+nav a:hover img,
+nav a:focus img,
+nav a:active img {
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+	/* For IE8 and earlier */
+}
+
 /**LINKS**/
 a:link { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #F4CBEC;
+	color: #F5579E;
 }
 
 a:visited { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #F4CBEC;
+	color: #F5579E;
 }
 
 a:hover, a:focus, a:active { 
 	font-weight: bold;
-	color: #F4CBEC;
+	color: #F5579E;
 }
 
 a:link img, a:visited img {
