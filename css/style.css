@@ -108,13 +108,11 @@ p {
 
 /**NAV UL**/
 nav ul{
-	border: 1px solid red;
 	height: auto;
 	list-style-type: none;
 }
 
 nav li{
-	border: 1px solid blue;
 	margin-left: .3em;
 	margin-right: .3em;
 	display: inline-block;
