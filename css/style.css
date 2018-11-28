@@ -60,6 +60,9 @@ section {
 	width: 650px;
 	min-height: 100%;
 	margin: auto;
+	 opacity: 0.5;
+	 filter: alpha(opacity=50);
+	 /* For IE8 and earlier */
 }
 
 #avatar {
@@ -112,6 +115,7 @@ table {
 
 thead {
 	background-color: #645b55;
+	color: #ac644c;
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
