@@ -128,7 +128,6 @@ nav img {
 table {
 	width: 100%;
 	border-collapse: collapse;
-	background-color: #f3f1ef
 }
 
 thead {
@@ -150,6 +149,10 @@ td {
 }
 
 .table_content {
+	background-color: #f3f1ef;
+}
+
+tbody {
 	background-color: #f3f1ef;
 }
 
