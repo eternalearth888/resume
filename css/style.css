@@ -142,6 +142,10 @@ thead {
 
 td {
 	vertical-align: top;
+	padding: .5em;
+}
+
+.main {
 	padding: 1.5em;
 }
 
