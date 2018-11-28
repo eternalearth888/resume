@@ -43,7 +43,7 @@ h4 {
 
 /**SECTIONS**/
 .top {
-	color: #F5579E;
+	color: #F4CBEC;
 	background-color: #22444c;
 	padding: .1em;
 }
@@ -79,6 +79,7 @@ article {
 section {
 	width: 800px;
 	height: 100%;
+	height: auto !important;
 	margin: auto;
 	padding-bottom: auto;
 }
@@ -132,7 +133,7 @@ table {
 
 thead {
 	background-color: #22444c;
-	color: #ac644c;
+	color: #F4CBEC;
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
