@@ -66,13 +66,14 @@ nav {
 
 article {
 	padding: 1em;
-	 opacity: 0.9;
-	 filter: alpha(opacity=90);
-	 /* For IE8 and earlier */
+	
+	background-color: #8d817d;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	/* For IE8 and earlier */
 }
 
 section {
-	background-color: #8d817d;
 	width: 650px;
 	min-height: 800px;
 	height: 100%;
