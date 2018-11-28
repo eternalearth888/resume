@@ -63,6 +63,7 @@ section {
 	width: 650px;
 	min-height: 100%;
 	margin: auto;
+	padding-bottom: auto;
 }
 
 #avatar {
