@@ -121,11 +121,10 @@ thead {
 td {
 	vertical-align: top;
 	padding: .5em;
-	background-color: #d2c7c4;
 }
 
 .sub {
-	background-color: #bdb3b0;
+	background-color: #d2c7c4;
 }
 
 .right {
@@ -133,10 +132,12 @@ td {
 	margin-right: 1em;
 	font-style: italic;
 	vertical-align: middle;
+	background-color: #bdb3b0;
 }
 
 .left {
 	text-align: left;
+	background-color: #bdb3b0;
 }
 
 .center {
@@ -162,18 +163,18 @@ ul {
 a:link { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #79B8A2;
+	color: #ac644c;
 }
 
 a:visited { 
 	font-weight: bold; 
 	text-decoration: none; 
-	color: #79B8A2;
+	color: #ac644c;
 }
 
 a:hover, a:focus, a:active { 
 	font-weight: bold;
-	color: #A8DBCD;
+	color: #ac644c;
 }
 
 a:link img, a:visited img {
