@@ -10,7 +10,7 @@ body {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	color: #31384D;
+	color: #303027;
 	font-size: 15px;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
@@ -36,8 +36,8 @@ h3 {
 
 /**SECTIONS**/
 .top {
-	color: #F494BE;
-	background-color: #31384D;
+	color: #ac644c;
+	background-color: #645b55;
 	padding: .1em;
 }
 
@@ -56,7 +56,7 @@ article {
 }
 
 section {
-	background-color: #F0F1F3;
+	background-color: #d2c7c4;
 	width: 650px;
 	min-height: 100%;
 	margin: auto;
@@ -122,7 +122,7 @@ td {
 }
 
 .sub {
-	background-color: #F4CBEC;
+	background-color: #ac644c;
 }
 
 .right {
