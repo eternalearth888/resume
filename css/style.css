@@ -149,7 +149,7 @@ td {
 }
 
 .table-content {
-	background-color: #bdb3b0;
+	background-color: #f3f1ef;
 }
 
 .right {
@@ -157,13 +157,13 @@ td {
 	margin-right: 1em;
 	font-style: italic;
 	vertical-align: middle;
-	background-color: #bdb3b0;
+	background-color: #f3f1ef;
 	color: #ac644c;
 }
 
 .left {
 	text-align: left;
-	background-color: #bdb3b0;
+	background-color: #f3f1ef;
 }
 
 .center {
