@@ -66,9 +66,7 @@ nav {
 
 article {
 	padding: 1em;
-	background-color: #8d817d;
-	opacity: 0.9;
-	filter: alpha(opacity=90);
+	background-color: rgb(141, 129, 125, .8);
 	/* For IE8 and earlier */
 }
 
@@ -154,10 +152,12 @@ tr {
 	margin-right: 1em;
 	font-style: italic;
 	vertical-align: middle;
+	background-color: #bdb3b0;
 }
 
 .left {
 	text-align: left;
+	background-color: #bdb3b0;
 }
 
 .center {
