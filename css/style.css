@@ -60,8 +60,8 @@ section {
 	width: 650px;
 	min-height: 100%;
 	margin: auto;
-	 opacity: 0.5;
-	 filter: alpha(opacity=50);
+	 opacity: 0.9;
+	 filter: alpha(opacity=90);
 	 /* For IE8 and earlier */
 }
 
