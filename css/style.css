@@ -74,7 +74,8 @@ article {
 section {
 	background-color: #8d817d;
 	width: 650px;
-	min-height: 100%;
+	min-height: 800px;
+	height: 100%;
 	margin: auto;
 	padding-bottom: auto;
 }
@@ -173,7 +174,7 @@ ul {
 }
 
 .nav-right {
-	margin-left: 20em;
+	margin-left: 10em;
 }
 
 
