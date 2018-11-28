@@ -86,11 +86,13 @@ p {
 
 /**NAV UL**/
 nav ul{
+	border: 1px solid red;
 	height: auto;
 	list-style-type: none;
 }
 
 nav li{
+	border: 1px solid blue;
 	margin-left: .3em;
 	margin-right: .3em;
 	display: inline-block;
@@ -119,10 +121,11 @@ thead {
 td {
 	vertical-align: top;
 	padding: .5em;
+	background-color: #d2c7c4;
 }
 
 .sub {
-	background-color: #d2c7c4;
+	background-color: #bdb3b0;
 }
 
 .right {
