@@ -77,7 +77,8 @@ section {
 }
 
 #avatar {
-	margin: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
 	float: left;
 	border-radius: 5em;
 	width: 150px;
