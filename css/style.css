@@ -5,14 +5,22 @@ html, body {
 body {
 	margin: 0;
 	padding: 0;
-	background: url(../images/bg.png) no-repeat center center fixed; 
+	background: url(../images/bg.jpg) no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	color: #070B07;
+	color: #31384D;
 	font-size: 15px;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+footer {
+	text-align: right;
+	vertical-align: middle;
+	padding: 1em;
+	background-color: rgb(49,56,77, .75);
+	color: #F5579E;
 }
 
 /**HEADERS & CONTENT**/
@@ -44,7 +52,7 @@ h4 {
 /**SECTIONS**/
 .top {
 	color: #F5579E;
-	background-color: #22444c;
+	background-color: #31384D;
 	padding: .1em;
 }
 
@@ -72,7 +80,7 @@ nav {
 
 article {
 	padding: 1em;
-	background-color: rgb(90, 112, 96, .75);
+	background-color: rgb(244,203,236, .75);
 	/* For IE8 and earlier */
 }
 
@@ -154,8 +162,21 @@ td {
 	background-color: #70b593;
 }
 
+.project {
+	padding: 1.5em;
+}
+
+.project img {
+	width: 256px;
+	height: 256px;
+	display: block;
+	margin: auto;
+	border-radius: 1em;
+	border: 5px solid #31384D;
+}
+
 .table-content {
-	background-color: #b0e8c7;
+	background-color: #D3BBBE;
 }
 
 .right {
@@ -163,13 +184,13 @@ td {
 	margin-right: 1em;
 	font-style: italic;
 	vertical-align: middle;
-	background-color: #b0e8c7;
+	background-color: #D3BBBE;
 	color: #22444c;
 }
 
 .left {
 	text-align: left;
-	background-color: #b0e8c7;
+	background-color: #D3BBBE;
 }
 
 .center {
