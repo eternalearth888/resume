@@ -95,7 +95,8 @@ article {
 }
 
 section {
-	width: 800px;
+	min-width: 800px;
+	width: 60%;
 	height: 100%;
 	height: auto !important;
 	margin: auto;
