@@ -598,33 +598,33 @@ using namespace std;
 int addition(int &x, int y); //NOTE THE SEMICOLON!
 
 int main() {
-int a = 10;
-int b = 5;
-cout << "BEFORE PASSING BY REFERENCE: " << endl;
-cout << "a = " << a << " , b = " << b << endl;
+	int a = 10;
+	int b = 5;
+	cout << "BEFORE PASSING BY REFERENCE: " << endl;
+	cout << "a = " << a << " , b = " << b << endl;
 
-// \n is just a fast way to start a new line, this is called an escape 
-character
-cout << "\nCALLING THE FUNCTION AND PRINTING THE RESULT OF ADDITION(a,b): " <<
- endl;
-cout << "A = 10, then it gets passed into addition, where X does X+5" << endl;
-cout << "X becomes 15, and because it is being added to Y which has the value
- of B = 5,\n we get a result of:" << endl;
-cout << "return x+y --> return 15+5 -- > result is 20" << endl;
-cout << "ADDITION(10,5) = " << addition(a,b) << endl;
-cout << "\nAFTER PASSING BY REFERENCE: " << endl;
-cout << "Since we passed A in by reference to X in addition, the change in\n
- value to X changes the value of A permanenetly for the code\n So now A = 15 
- too" << endl;
-cout << "a = " << a << " , b = " << b << endl;
-// what happens to a if i call addition again?
-addition(a,b);
-cout << "\nAFTER PASSING BY REFERENCE SECOND TIME: " << endl;
-cout << "If we call addition again, even if we don't print the new result, the
- permanent change to A and X\n still occurs anyway and we add another 5 to 
- it." << endl;
-cout << "a = " << a << " , b = " << b << endl;
-return 0;
+	// \n is just a fast way to start a new line, this is called an escape 
+	character
+	cout << "\nCALLING THE FUNCTION AND PRINTING THE RESULT OF ADDITION(a,b): " <<
+	 endl;
+	cout << "A = 10, then it gets passed into addition, where X does X+5" << endl;
+	cout << "X becomes 15, and because it is being added to Y which has the value
+	 of B = 5,\n we get a result of:" << endl;
+	cout << "return x+y --> return 15+5 -- > result is 20" << endl;
+	cout << "ADDITION(10,5) = " << addition(a,b) << endl;
+	cout << "\nAFTER PASSING BY REFERENCE: " << endl;
+	cout << "Since we passed A in by reference to X in addition, the change in\n
+	 value to X changes the value of A permanenetly for the code\n So now A = 15 
+	 too" << endl;
+	cout << "a = " << a << " , b = " << b << endl;
+	// what happens to a if i call addition again?
+	addition(a,b);
+	cout << "\nAFTER PASSING BY REFERENCE SECOND TIME: " << endl;
+	cout << "If we call addition again, even if we don't print the new result, the
+	 permanent change to A and X\n still occurs anyway and we add another 5 to 
+	 it." << endl;
+	cout << "a = " << a << " , b = " << b << endl;
+	return 0;
 }
 
 // notice how I have the & symbol next to x, this means that x is being passed
@@ -634,14 +634,14 @@ return 0;
 // instead x in our function gets the value that is the memory address of the
  variable that x was given in main
 int addition(int &x, int y) {
-// for concept purposes I am doing this on purpose to show what will happen
- later
-// because x is being passed by reference, any changes in the value of x will 
-happen to same thing in 
-// the variable we gave it, in this case the a variable from main.
-// BREAKDOWN: if x changes from 5 to 10, then a is also now 10
-x = x + 5; 
-return x + y;
+	// for concept purposes I am doing this on purpose to show what will happen
+	 later
+	// because x is being passed by reference, any changes in the value of x will 
+	happen to same thing in 
+	// the variable we gave it, in this case the a variable from main.
+	// BREAKDOWN: if x changes from 5 to 10, then a is also now 10
+	x = x + 5; 
+	return x + y;
 }
 			</code></pre>
 			</td>
@@ -713,7 +713,7 @@ There are 3 possible ways to setup a function so that we can call it in main to 
 using namespace std;
 
 int subtraction(int x, int y) {
-return x - y;
+	return x - y;
 }
 
 int main() {
@@ -782,7 +782,7 @@ return 0;
 
 // FUNCTION DEFINITION
 int subtraction(int x, int y) { 
-return x - y;
+	return x - y;
 }
 
 </code></pre>
@@ -878,7 +878,7 @@ using namespace std;
 
 // FUNCTION DEFINITION
 int subtraction(int x, int y) { 
-return x - y;
+	return x - y;
 }
 ----------------------------------------------------------------------
 
@@ -906,8 +906,8 @@ return 0;
 	</tbody>
 </table>
 <table>
-	<tr>
-		<td>
+	<tr class="table-content">
+		<td class="main">
 			<center> You are Enough </center>
 		</td>
 	</tr>
