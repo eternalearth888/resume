@@ -1,3 +1,6 @@
+import hljs from 'highlight.js/lib/highlight';
+import 'highlight.js/styles/github.css';
+
 html, body {
 	height: 100%;
 }
@@ -178,6 +181,10 @@ td {
 
 .sub {
 	background-color: #F4CBEC;
+}
+
+.sub2 {
+	background-color: #F7E4F3;
 }
 
 .project {

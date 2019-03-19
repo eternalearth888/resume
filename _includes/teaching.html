@@ -1,0 +1,893 @@
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				General Structure
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+/* Header comment 
+* Program name, author, purpose 
+*/
+//preprocessing directives
+
+#include < iostream >
+using namespace std;
+
+//header file for functions prototypes go here
+
+int main() { 
+     // what your program does 
+     cout << "Hello World!" << endl;
+	     // exiting the program
+    return 0; 
+}	
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Variable Declarations
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+int puppies;
+double seconds = 23.6;
+const char YES = 'y';
+bool aceTest = true;
+
+int cats, dogs; // multiple declaration
+cats = dogs = 20; // multiple assignment
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Expressions
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="sub">
+			<td>
+				Have a pragmatic understanding of <a href="https://en.cppreference.com/w/cpp/language/operator_precedence" target="_blank">operator precedence</a>. When in doubt or to express clarity, use parenthesis.
+			</td>	
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+int maleDogs = 3;
+int femaleDogs = 2;
+int puppies;
+
+puppies = maleDogs * femaleDogs;
+puppies++; // one more puppy
+puppies += 5; // five more puppies
+puppies *= 5; // five times as many puppies!
+
+int example = maleDogs / femaleDogs; // why does this yield 1?
+example = 0 % maleDogs; // 0 % anything is always 0
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+	<thead>
+		<tr>
+			<td>
+				Operations with Mixed Types
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				An int operator int yields an int. A double operator double yields a double.
+				<br />
+				Operations with mixed types will yield a value whose type is of the "greater precision," so to speak. A double operator int yields a double.
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Flow control: if, else if, else
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+char answer;
+cout << "Do you like cookies? (enter Y or N)\n";
+cin >> answer;
+if (answer == 'Y') {
+    cout << "No way! I love cookies too!\n";
+} else if (answer == 'N') {
+    cout << "Hm, maybe I can offer you some green beans.\n";
+} else {
+    cout << "I'm confused. Guess I'll go eat a cookie.\n"
+}
+			</code></pre>
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="sub">
+				Remember, flow control constructs can be nested. Keep it tidy.
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre><code class="cpp">
+char likesCookies;
+char likesArtichokes;
+cout << "Do you like cookies? (enter Y or N)\n";
+cin >> likesCookies;
+if (likesCookies == 'Y') {
+    cout << "Ok, but do you like artichokes? (Y or N)\n";
+    cin >> likesArtichokes;
+    if (likesArtichokes == 'Y') {
+        cout << "Artichokes, nice!\n";
+    } else {
+        cout << "Geez, no artichokes?\n";
+    } 
+} else if (answer == 'N') {
+    cout << "Hm, maybe I can offer you some green beans.\n";
+} else {
+    cout << "I'm confused. Guess I'll go eat a cookie.\n"
+}
+				</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Flow control: while
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				Remember, a while loop assumes some initial state of the world before it begins, checks the terminating condition, and usually includes something to change the condition within the loop.
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+int countdown = 10;
+while ( countdown > 0 ) {
+    cout << countdown << endl;
+    countdown--;
+}
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Flow control: for
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				A for loop has the same three main loop components (initialization, condition, modifier) as a while loop but in a more concise syntax.
+<pre><code class="cpp">
+for ( initialization; condition; modifier ) {
+   //do something
+}
+</code></pre>
+Here's the above while loop rewritten as a for loop.
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+int countdown = 10;
+for ( int countdown = 10; countdown > 0; countdown-- ) {
+    cout << countdown << endl;
+}
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Defining Functions
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+Functions are always defined according to the following pattern.
+<pre><code class="cpp">
+returnType functionName(parameterList) {
+    // function drama
+    // properly indented, of course
+}
+</code></pre>
+Every function has a return type, name and parameter list. However, parameter lists can be empty if the function accepts no arguments. If the function does not return a value to its caller, then the return type should be void.
+<br />
+More importantly, you need to be able to write a function given a particular definition. Here is one example: "Write a function called dance that accepts one int parameter called howLong, one string parameter called move and returns a boolean value."
+			</td>
+		</tr>
+
+		<tr class="table-content">
+			<td class="main">
+				<pre><code class="cpp">
+bool dance(int howLong, string move) {
+    // function drama properly indented, of course
+    // returns some boolean value
+}
+			</code></pre>
+			</td>
+		</tr>
+
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Arrays
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				The general pattern for array declaration is like this:
+<pre><code class="cpp">
+dataType arrayName[size];
+</code></pre>
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+int ages[10]; // declares an array of ten integers
+char letters[5]; // declares an array of ten characters
+int scores[2] = {10, 20}; // declares and initializes values
+int ratings[5] = {0}; // initializes all array values to 0
+
+letters[0] = 'q'; // stores the value 'q' in the 0th position
+int x = scores[1]; // assign the value in the 1th position to x
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Arrays + Operational Offset
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				The general formula for finding an array element in 
+				memory is like this:
+<pre><code class="cpp">
+elementAddress = baseAddress + (dataTypeSize * offset)
+</code></pre>
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+			<b><u>Example:</u></b><br />
+			<pre><code class="cpp">
+Given:
+int myArray[2] = {4,7,8};
+Find:
+cout << myArray[2] << endl;
+
+/*
+Base Address is 4235
+DataType size for ints is 4
+NumColsPerRow is 4
+Offset is 2
+
+elementAddress = 4235 + (4*2) 
+			   = 4235 + 8
+			   = 4243
+*/
+</code></pre>
+			</td>
+		</tr>
+		<td class="sub">
+				The general formula for finding an element in a 2D 
+				array in memory is like this:
+<pre><code class="cpp">
+elementAddress = baseAddress
+                 + (dataTypeSize * numColsPerRow * rowOffset)
+                 + dataTypeSize * colOffset
+             </code></pre>
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+			<b><u>Example:</u></b><br />
+			<pre><code class="cpp">
+Given:
+int myArray[2][4] = { {4,7,3,2}, {8,1,9,0} };
+Find:
+cout << myArray[1][2] << endl;
+
+/*
+Base Address is 6789
+DataType size for ints is 4
+NumColsPerRow is 4
+Row Offset is 1
+Col Offset is 2
+
+elementAddress = 6789 + (4*4*1) + (4*2)
+			   = 6789 + 16 + 8
+			   = 6789 + 24
+			   = 6813
+*/
+ 			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Vectors
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				Remember, a vector is like an array but without the extra baggage.
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+#include <vector>
+
+vector<int> numbers; // a vector called numbers that holds ints
+vector<Bunny> rabbits; // a vector called rabbits that holds cute Bunny objects
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Arrays & Loops
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				Remember, for loops naturally complement arrays, and the for loop's counter variable is often used inside the loop to access the array.
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+const int NUMBER_OF_AGES = 10;
+int ages[NUMBER_OF_AGES];
+for (int i = 0; i < NUMBER_OF_AGES; ++i) {
+    ages[i] = 21;
+}
+// ages now contains ten 21's. Have a root beer.
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				2D Arrays & Loops
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				The general pattern for a 2D array declaration is like this:
+<pre><code class="cpp">
+dataType arrayName[rows][columns];
+</code></pre>
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				The key idea here is that the outer loop determines "which row" while the inner loop determines "which column."
+				<pre>
+					<code class="cpp">
+const int DAYS_IN_WEEK = 7;
+const int WEEKS = 2;
+int temperatures[WEEKS][DAYS_IN_WEEK];
+for (int i = 0; i < WEEKS; ++i) {
+    for (int j = 0; j < DAYS_IN_WEEK; ++j) {
+        temperatures[i][j] = 0; // cold
+    }
+}
+// temperatures now contains two rows of seven values (all 0). Have a kombucha.
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Structs
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				The general pattern for a Struct is like this:
+<pre><code class="cpp">
+struct structName {
+	// other variables 
+	// that build our struct
+};
+</code></pre>
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+					<pre>
+					<code class="cpp">
+#include < iostream >
+#include < cstring >
+
+using namespace std;
+
+
+// declare before person so that it exists already for Person - derp!
+struct ImperialHeight {
+    int feet; 
+    int inches;
+};
+
+
+struct Person {
+    ImperialHeight height;
+    string name;
+    string secretIdentity;
+    char gender;
+    int age;
+    char hairColor;
+    bool rightHandDominant;
+    bool rightEyeDominant;
+};
+
+int main() {
+    Person peterParker;
+    peterParker.name = "Peter Parker";
+    peterParker.hairColor = 'b';
+    peterParker.secretIdentity = "SpiderMan";
+    peterParker.height.feet = 5;
+    peterParker.height.inches = 10;
+    peterParker.age = 15;
+    peterParker.gender = 'm';
+    peterParker.rightHandDominant = true;
+    peterParker.rightEyeDominant = true;
+    
+    cout << "Hi! I'm " << peterParker.name << "! But my friends know me as "
+            << peterParker.secretIdentity << "!" << endl;
+    cout << "I am " << peterParker.height.feet << "\"" << 
+
+    peterParker.height.inches << "\'"<< endl;
+    
+    return 0;
+    
+}
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Pass By Refernce (Overall Concept)
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr >
+			<td class ="sub">
+				The key reason that happens is because when we use the &, it 
+				is passing the memory address so that both variables share the
+				 same memory address. So when x changes and goes away, the 
+				 value change sticks to a and that's why it doesn't reset to 
+				 the old value :) 
+			</td>
+		</tr>
+		<tr>
+			<td class="sub2">
+				I am using method 2 for functions, where prototypes exist
+				above main and the function definition exist below main.
+				I want you to copy paste this code, and run it, and then read 
+				the comments so you can see everything that is happening.
+</td>
+</tr>
+<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+#include< iostream >
+
+using namespace std;
+
+// notice how we have to include the & symbol even in our prototype for
+ it to work
+int addition(int &x, int y); //NOTE THE SEMICOLON!
+
+int main() {
+int a = 10;
+int b = 5;
+cout << "BEFORE PASSING BY REFERENCE: " << endl;
+cout << "a = " << a << " , b = " << b << endl;
+
+// \n is just a fast way to start a new line, this is called an escape 
+character
+cout << "\nCALLING THE FUNCTION AND PRINTING THE RESULT OF ADDITION(a,b): " <<
+ endl;
+cout << "A = 10, then it gets passed into addition, where X does X+5" << endl;
+cout << "X becomes 15, and because it is being added to Y which has the value
+ of B = 5,\n we get a result of:" << endl;
+cout << "return x+y --> return 15+5 -- > result is 20" << endl;
+cout << "ADDITION(10,5) = " << addition(a,b) << endl;
+cout << "\nAFTER PASSING BY REFERENCE: " << endl;
+cout << "Since we passed A in by reference to X in addition, the change in\n
+ value to X changes the value of A permanenetly for the code\n So now A = 15 
+ too" << endl;
+cout << "a = " << a << " , b = " << b << endl;
+// what happens to a if i call addition again?
+addition(a,b);
+cout << "\nAFTER PASSING BY REFERENCE SECOND TIME: " << endl;
+cout << "If we call addition again, even if we don't print the new result, the
+ permanent change to A and X\n still occurs anyway and we add another 5 to 
+ it." << endl;
+cout << "a = " << a << " , b = " << b << endl;
+return 0;
+}
+
+// notice how I have the & symbol next to x, this means that x is being passed
+ by reference
+// passing by reference means that instead of the value  from a variable that
+ x is given in main, 
+// instead x in our function gets the value that is the memory address of the
+ variable that x was given in main
+int addition(int &x, int y) {
+// for concept purposes I am doing this on purpose to show what will happen
+ later
+// because x is being passed by reference, any changes in the value of x will 
+happen to same thing in 
+// the variable we gave it, in this case the a variable from main.
+// BREAKDOWN: if x changes from 5 to 10, then a is also now 10
+x = x + 5; 
+return x + y;
+}
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Passing Arguments by Reference
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				Remember, the "rule of thumb" is to (almost always) pass objects [structs, arrays, vectors, strings] by reference.
+				<br/>
+				In order to tell the machine that a function should receive its argument by reference, you simply prepend a & before the parameter name.
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+void changeRed(Square &sq) {
+    sq.red = 255;
+}
+
+Square s;
+changeRed(s);
+// s.red is now 255
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<thead>
+		<tr>
+			<td>Functions in Files</td>
+		</tr>
+	</thead>
+	<tbody>
+			<tr>
+			<td class="sub"> 
+				A function is basically a subprogram in your code that acts on the data related to that code and can return a value.
+				<br />
+				Every C++ program already has at least one function --> main(). When your program starts, main() is called automatically. Inside of main(), one 
+				can call other functions to do the extra work in main. And it's totally possible to have functions call other functions within them (We will see this in A4)
+				For now it may seem like overkill since the coding we're doing in class is not super long or intensive, but it will make a difference in how your program runs, especially as your code does get bigger in theory!
+			</td>
+		</tr>
+		<tr class="table-content">
+			
+		<td class="sub2">
+There are 3 possible ways to setup a function so that we can call it in main to do the work for us.
+<br />
+<b><u>1. Is to create our function above main. </u></b>
+</td>
+</tr>
+<tr>
+	<td class="sub">
+<pre><code class="cpp">
+#include < iostream >
+using namespace std;
+
+int subtraction(int x, int y) {
+return x - y;
+}
+
+int main() {
+
+int a = 10;
+int b = 5;
+  
+//There are two ways we can call this function and get the value it calculates 
+without passing by reference (we can talk about that later)
+// The first way is to store it in another variable
+int result = subtraction(a,b);
+// result will store the vale the subtraction function returns once the program 
+hits this line and calls the function subtraction
+
+
+// The second way is to output it using cout
+cout << "The difference is " << subtraction(a,b) << "." << endl;
+
+return 0;
+}
+</code></pre>
+		</td>
+		</tr>
+	<tr class="table-content">
+		<td class="sub2">
+			<b><u>2. Split that function up into two parts! Prototype and definition!</u></b>
+			<br />
+			What I personally like to do is make all my functions like we have above with just declaring and defining my functions above main. 
+Once I have what I want working and everything is running smoothly. I now feel confident enough to split that function into two parts
+i. Prototypes stay above main, so that the computer/program know that this function exists
+ii. Definition goes under main once your prototype is done
+So what I do in this case is 
+a. Copy the function you have above main entirely and put it under main, boom you now have your function definition!
+b. Copy only the "header" part of the function for your prototype. This includes the datatype, function name, and parameters
+This is what it should look like once that happens:
+</td>
+<tr>
+	<td class="sub">
+<pre><code class="cpp">
+#include < iostream >
+using namespace std;
+
+int subtraction(int x, int y) ; // FUNCTION PROTOTYPE
+
+int main() {
+
+int a = 10;
+int b = 5;
+  
+//There are two ways we can call this function and 
+get the value it calculates without passing by reference 
+(we can talk about that later)
+// The first way is to store it in another variable
+int result = subtraction(a,b);
+// result will store the vale the subtraction 
+function returns once the program hits this line and calls the function 
+subtraction
+
+// The second way is to output it using cout
+cout << "The difference is " << subtraction(a,b) << "." << endl;
+
+return 0;
+}
+
+int subtraction(int x, int y) { // FUNCTION DEFINITION
+return x - y;
+}
+
+</code></pre>
+		</td>
+		</tr>
+		<tr class="table-content">
+		<td class="sub2">
+			<b><u>3. Last but not least, splitting the function into multiple 
+			files</u></b>
+			<br />
+			In my opinion, this part is easiest if you already have your function prototypes and definitions split up like we did just now. 
+But the reason we can/are able to do multiple files is because well - imagine video game code for example. Having all of their functions and their main
+in one file means they will end up with a CRAZY long file and it will slow down the program a bit as it tries to find all the functions in the same file.
+It's not so much a "YOU MUST DO IT THIS WAY!" as it is just a convenient way to clean and organize your code for the long term 
+<br/><br />
+<b>
+<u>Note:</u><br />
+i. Header files are the .h files. They will/should only hold onto your function prototypes
+<br/>
+ii. Implementation files are .cpp files, this is where all your function definitions go and where all the work will be done. In this case, your implementation file name MUST have the same name as your header file name. So if you make a cat.h, you need to make a cat.cpp.
+</b>
+<br /><br /><br />
+So let's take the example we have been working with and try to split it up into files. 
+To make a header file from here, I want you to right click on your Project Folder and click "Create New Header File" and you can call it something like calculator.h. Then right click your Project folder again and click "Create New Source File" and you can call it calculator.cpp. 
+<br /><br />
+We have now made our header ad implementation files.
+<br /><br />
+But WAIT! There's more! 
+<br /><br />
+From here, we will cut and paste the prototype in main and put in in the header file in between the #if and #endif thing that the file came with.
+<br /><br />
+Once that is done, go back to main.cpp and where our prototypes were, we are now gonna have a new line of code there that says #include "calculator.h"
+<br /><br />
+This his how the program will know to look for that file and those function prototypes for main.
+<br /><br />
+Then, we want to copy paste the same preprocessing directives plus our new #include "calculator.h" and put that in calculator.cpp
+<br /><br />
+After that, cut paste your function definitions after the preprocessing directives in calculator.cpp
+<br /><br />
+So visually you will have three files that look something like this:
+</td>
+<tr>
+	<td class="sub">
+<pre><code class="cpp">
+
+	------------------------------main.cpp----------------------------
+	#include < iostream >
+	using namespace std;
+
+	#include "calculator.h" // this is now symbolic,
+	 this tells the computer that all the function prototypes are in this file
+	// it MUST come after all the libraries/preprocessing 
+	directives so it can use them for their prototypes
+	int main() {
+
+	int a = 10;
+	int b = 5;
+	  
+	//There are two ways we can call this function and get the value it calculates 
+	without passing by reference (we can talk about that later)
+	// The first way is to store it in another variable
+	int result = subtraction(a,b);
+	// result will store the vale the subtraction function returns once the 
+	program hits this line and calls the function subtraction
+
+	// The second way is to output it using cout
+	cout << "The difference is " << subtraction(a,b) << "." << endl;
+
+	return 0;
+	}
+	---------------------------------------------------------------------
+
+	----------------------------calculator.h-----------------------------
+	#ifndef PROJECTNAME_HEADERFILENAME_H // PROJECTNAME_HEADERFILENAME_H will be 
+	automatically generated for you when you create your header file in CLION
+	#define  PROJECTNAME_HEADERFILENAME_H
+
+	int subtraction(int x, int y) ; // FUNCTION PROTOTYPE
+
+	#endif // PROJECTNAME_HEADERFILENAME_H
+	--------------------------------------------------------------------
+
+	---------------------------calculator.cpp---------------------------
+	#include < iostream >
+	// we need to add the same libraries we have in our main.cpp so we can keep
+	 our calculations going
+	using namespace std; 
+
+	// we need to include the header file so it knows where it's prototypes are
+	#include "calculator.h" 
+
+	// FUNCTION DEFINITION
+	int subtraction(int x, int y) { 
+	return x - y;
+	}
+	----------------------------------------------------------------------
+
+<b><center>
+Now when you run this code, it should work as if the entire time 
+all you had was this:
+</center></b>
+	---------------------------------------------------------------------
+	#include< iostream >
+	using namespace std;
+
+	int main() {
+	int a = 10;
+	int b = 5;
+
+	cout << "The difference between a and b is " << a-b << endl;
+
+	return 0;
+	}
+	---------------------------------------------------------------------
+</center>
+</code></pre>
+		</td>
+		</tr>
+	</tbody>
+</table>
