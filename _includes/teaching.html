@@ -628,16 +628,16 @@ int main() {
 }
 
 // notice how I have the & symbol next to x, this means that x is being passed
- by reference
+// by reference
 // passing by reference means that instead of the value  from a variable that
- x is given in main, 
+// x is given in main, 
 // instead x in our function gets the value that is the memory address of the
- variable that x was given in main
+// variable that x was given in main
 int addition(int &x, int y) {
 	// for concept purposes I am doing this on purpose to show what will happen
-	 later
+	// later
 	// because x is being passed by reference, any changes in the value of x will 
-	happen to same thing in 
+	// happen to same thing in 
 	// the variable we gave it, in this case the a variable from main.
 	// BREAKDOWN: if x changes from 5 to 10, then a is also now 10
 	x = x + 5; 
@@ -718,21 +718,21 @@ int subtraction(int x, int y) {
 
 int main() {
 
-int a = 10;
-int b = 5;
-  
-//There are two ways we can call this function and get the value it 
-// calculateswithout passing by reference (we can talk about that later)
-// The first way is to store it in another variable
-int result = subtraction(a,b);
-// result will store the vale the subtraction function returns once the program 
-//hits this line and calls the function subtraction
+	int a = 10;
+	int b = 5;
+	  
+	//There are two ways we can call this function and get the value it 
+	// calculateswithout passing by reference (we can talk about that later)
+	// The first way is to store it in another variable
+	int result = subtraction(a,b);
+	// result will store the vale the subtraction function returns once the program 
+	//hits this line and calls the function subtraction
 
 
-// The second way is to output it using cout
-cout << "The difference is " << subtraction(a,b) << "." << endl;
+	// The second way is to output it using cout
+	cout << "The difference is " << subtraction(a,b) << "." << endl;
 
-return 0;
+	return 0;
 }
 </code></pre>
 		</td>
@@ -762,22 +762,22 @@ int subtraction(int x, int y) ; // FUNCTION PROTOTYPE
 
 int main() {
 
-int a = 10;
-int b = 5;
-  
-//There are two ways we can call this function and 
-// get the value it calculates without passing by reference 
-// (we can talk about that later)
-// The first way is to store it in another variable
-int result = subtraction(a,b);
-// result will store the vale the subtraction 
-//function returns once the program hits this line 
-// and calls the function subtraction
+	int a = 10;
+	int b = 5;
+	  
+	//There are two ways we can call this function and 
+	// get the value it calculates without passing by reference 
+	// (we can talk about that later)
+	// The first way is to store it in another variable
+	int result = subtraction(a,b);
+	// result will store the vale the subtraction 
+	//function returns once the program hits this line 
+	// and calls the function subtraction
 
-// The second way is to output it using cout
-cout << "The difference is " << subtraction(a,b) << "." << endl;
+	// The second way is to output it using cout
+	cout << "The difference is " << subtraction(a,b) << "." << endl;
 
-return 0;
+	return 0;
 }
 
 // FUNCTION DEFINITION
@@ -838,20 +838,20 @@ using namespace std;
 
 int main() {
 
-int a = 10;
-int b = 5;
-  
-//There are two ways we can call this function and get the value it calculates 
-//without passing by reference (we can talk about that later)
-// The first way is to store it in another variable
-int result = subtraction(a,b);
-// result will store the vale the subtraction function returns once the 
-//program hits this line and calls the function subtraction
+	int a = 10;
+	int b = 5;
+	  
+	//There are two ways we can call this function and get the value it calculates 
+	//without passing by reference (we can talk about that later)
+	// The first way is to store it in another variable
+	int result = subtraction(a,b);
+	// result will store the vale the subtraction function returns once the 
+	//program hits this line and calls the function subtraction
 
-// The second way is to output it using cout
-cout << "The difference is " << subtraction(a,b) << "." << endl;
+	// The second way is to output it using cout
+	cout << "The difference is " << subtraction(a,b) << "." << endl;
 
-return 0;
+	return 0;
 }
 ---------------------------------------------------------------------
 
@@ -891,12 +891,12 @@ all you had was this:
 using namespace std;
 
 int main() {
-int a = 10;
-int b = 5;
+	int a = 10;
+	int b = 5;
 
-cout << "The difference between a and b is " << a-b << endl;
+	cout << "The difference between a and b is " << a-b << endl;
 
-return 0;
+	return 0;
 }
 ---------------------------------------------------------------------
 </center>
