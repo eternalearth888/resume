@@ -22,10 +22,10 @@ using namespace std;
 //header file for functions prototypes go here
 
 int main() { 
-     // what your program does 
-     cout << "Hello World!" << endl;
-	     // exiting the program
-    return 0; 
+// what your program does 
+cout << "Hello World!" << endl;
+// exiting the program
+return 0; 
 }	
 			</code></pre>
 			</td>
@@ -48,7 +48,8 @@ int main() {
 					<code class="cpp">
 int puppies;
 double seconds = 23.6;
-const char YES = 'y';
+// const means that this cannot be altered
+const char YES = 'y'; 
 bool aceTest = true;
 
 int cats, dogs; // multiple declaration
@@ -92,11 +93,13 @@ example = 0 % maleDogs; // 0 % anything is always 0
 int x = 5;
 int y = 2;
 
-y = 2 + x++;  // first evaluate the expression, then increment the x
-
-VERSUS
-
-y = ++x + 2; // first increment the x, then evaluate the expression
+// first evaluate the expression, 
+// then increment the x
+y = 2 + x++; 
+//VERSUS
+// first increment the x,
+// then evaluate the expression
+y = ++x + 2; 
 			</code></pre>
 			</td>
 		</tr>
@@ -255,6 +258,7 @@ Functions are always defined according to the following pattern.
 returnType functionName(parameterList) {
     // function drama
     // properly indented, of course
+    // proper return value based on returnType
 }
 </code></pre>
 Every function has a return type, name and parameter list. However, parameter lists can be empty if the function accepts no arguments. If the function does not return a value to its caller, then the return type should be void.
@@ -268,7 +272,11 @@ More importantly, you need to be able to write a function given a particular def
 				<pre><code class="cpp">
 bool dance(int howLong, string move) {
     // function drama properly indented, of course
+    if (move != "" || move != "null") {
+    	return true;	
+	}
     // returns some boolean value
+    return false;
 }
 			</code></pre>
 			</td>
@@ -392,34 +400,6 @@ elementAddress = 6789 + (4*4*1) + (4*2)
 	<thead>
 		<tr>
 			<td>
-				Vectors
-			</td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td class="sub">
-				Remember, a vector is like an array but without the extra baggage.
-			</td>
-		</tr>
-		<tr class="table-content">
-			<td class="main">
-				<pre>
-					<code class="cpp">
-#include < vector >
-
-vector< int > numbers; // a vector called numbers that holds ints
-vector< Bunny > rabbits; // a vector called rabbits that holds cute Bunny objects
-			</code></pre>
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-<table id="education">
-	<thead>
-		<tr>
-			<td>
 				Arrays & Loops
 			</td>
 		</tr>
@@ -478,6 +458,34 @@ for (int i = 0; i < WEEKS; ++i) {
     }
 }
 // temperatures now contains two rows of seven values (all 0). Have a kombucha.
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Vectors
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				Remember, a vector is like an array but without the extra baggage.
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+#include < vector >
+
+vector< int > numbers; // a vector called numbers that holds ints
+vector< Bunny > rabbits; // a vector called rabbits that holds cute Bunny objects
 			</code></pre>
 			</td>
 		</tr>
@@ -598,33 +606,33 @@ using namespace std;
 int addition(int &x, int y); //NOTE THE SEMICOLON!
 
 int main() {
-	int a = 10;
-	int b = 5;
-	cout << "BEFORE PASSING BY REFERENCE: " << endl;
-	cout << "a = " << a << " , b = " << b << endl;
+int a = 10;
+int b = 5;
+cout << "BEFORE PASSING BY REFERENCE: " << endl;
+cout << "a = " << a << " , b = " << b << endl;
 
-	// \n is just a fast way to start a new line, this is called an escape 
-	// character
-	cout << "\nCALLING THE FUNCTION AND PRINTING THE RESULT OF ADDITION(a,b): " <<
-	 endl;
-	cout << "A = 10, then it gets passed into addition, where X does X+5" << endl;
-	cout << "X becomes 15, and because it is being added to Y which has the value
-	 of B = 5,\n we get a result of:" << endl;
-	cout << "return x+y --> return 15+5 -- > result is 20" << endl;
-	cout << "ADDITION(10,5) = " << addition(a,b) << endl;
-	cout << "\nAFTER PASSING BY REFERENCE: " << endl;
-	cout << "Since we passed A in by reference to X in addition, the change in\n
-	 value to X changes the value of A permanenetly for the code\n So now A = 15 
-	 too" << endl;
-	cout << "a = " << a << " , b = " << b << endl;
-	// what happens to a if i call addition again?
-	addition(a,b);
-	cout << "\nAFTER PASSING BY REFERENCE SECOND TIME: " << endl;
-	cout << "If we call addition again, even if we don't print the new result, the
-	 permanent change to A and X\n still occurs anyway and we add another 5 to 
-	 it." << endl;
-	cout << "a = " << a << " , b = " << b << endl;
-	return 0;
+// \n is just a fast way to start a new line, this is called an escape 
+// character
+cout << "\nCALLING THE FUNCTION AND PRINTING THE RESULT OF ADDITION(a,b): " <<
+endl;
+cout << "A = 10, then it gets passed into addition, where X does X+5" << endl;
+cout << "X becomes 15, and because it is being added to Y which has the value
+of B = 5,\n we get a result of:" << endl;
+cout << "return x+y --> return 15+5 -- > result is 20" << endl;
+cout << "ADDITION(10,5) = " << addition(a,b) << endl;
+cout << "\nAFTER PASSING BY REFERENCE: " << endl;
+cout << "Since we passed A in by reference to X in addition, the change in\n
+value to X changes the value of A permanenetly for the code\n So now A = 15 
+too" << endl;
+cout << "a = " << a << " , b = " << b << endl;
+// what happens to a if i call addition again?
+addition(a,b);
+cout << "\nAFTER PASSING BY REFERENCE SECOND TIME: " << endl;
+cout << "If we call addition again, even if we don't print the new result, the
+permanent change to A and X\n still occurs anyway and we add another 5 to 
+it." << endl;
+cout << "a = " << a << " , b = " << b << endl;
+return 0;
 }
 
 // notice how I have the & symbol next to x, this means that x is being passed
@@ -634,14 +642,14 @@ int main() {
 // instead x in our function gets the value that is the memory address of the
 // variable that x was given in main
 int addition(int &x, int y) {
-	// for concept purposes I am doing this on purpose to show what will happen
-	// later
-	// because x is being passed by reference, any changes in the value of x will 
-	// happen to same thing in 
-	// the variable we gave it, in this case the a variable from main.
-	// BREAKDOWN: if x changes from 5 to 10, then a is also now 10
-	x = x + 5; 
-	return x + y;
+// for concept purposes I am doing this on purpose to show what will happen
+// later
+// because x is being passed by reference, any changes in the value of x will 
+// happen to same thing in 
+// the variable we gave it, in this case the a variable from main.
+// BREAKDOWN: if x changes from 5 to 10, then a is also now 10
+x = x + 5; 
+return x + y;
 }
 			</code></pre>
 			</td>
@@ -660,7 +668,7 @@ int addition(int &x, int y) {
 	<tbody>
 		<tr>
 			<td class="sub">
-				Remember, the "rule of thumb" is to (almost always) pass objects [structs, arrays, vectors, strings] by reference.
+				Remember, the "rule of thumb" is to (almost always) pass objects [structs, arrays (sometimes), vectors  (sometimes), strings] by reference.
 				<br/>
 				In order to tell the machine that a function should receive its argument by reference, you simply prepend a & before the parameter name.
 			</td>
@@ -691,18 +699,31 @@ changeRed(s);
 	<tbody>
 			<tr>
 			<td class="sub"> 
-				A function is basically a subprogram in your code that acts on the data related to that code and can return a value.
+				A function is basically a subprogram 
+				in your code that acts on the data 
+				related to that code and can return 
+				a value.
+				<br /> <br />
+				Every C++ program already has at 
+				least one function --> main(). 
 				<br />
-				Every C++ program already has at least one function --> main(). When your program starts, main() is called automatically. Inside of main(), one 
-				can call other functions to do the extra work in main. And it's totally possible to have functions call other functions within them (We will see this in A4)
-				For now it may seem like overkill since the coding we're doing in class is not super long or intensive, but it will make a difference in how your program runs, especially as your code does get bigger in theory!
+				When your program starts, main() is 
+				called automatically. Inside of 
+				main(), one 
+				can call other functions to do the 
+				extra work in main. And it's totally 
+				possible to have functions call 
+				other functions within them (We will 
+				see this in A4)
+				<br /><br />
+				There are 3 possible ways to setup a 
+				function so that we can call it in 
+				main to do the work for us.
 			</td>
 		</tr>
 		<tr class="table-content">
 			
 		<td class="sub2">
-There are 3 possible ways to setup a function so that we can call it in main to do the work for us.
-<br />
 <b><u>1. Is to create our function above main. </u></b>
 </td>
 </tr>
@@ -717,39 +738,61 @@ int subtraction(int x, int y) {
 }
 
 int main() {
+int a = 10;
+int b = 5;
+  
+//There are two ways we can call this function and get the value it 
+// calculateswithout passing by reference (we can talk about that later)
+// The first way is to store it in another variable
+int result = subtraction(a,b);
+// result will store the vale the subtraction function returns once the program 
+//hits this line and calls the function subtraction
 
-	int a = 10;
-	int b = 5;
-	  
-	//There are two ways we can call this function and get the value it 
-	// calculateswithout passing by reference (we can talk about that later)
-	// The first way is to store it in another variable
-	int result = subtraction(a,b);
-	// result will store the vale the subtraction function returns once the program 
-	//hits this line and calls the function subtraction
 
+// The second way is to output it using cout
+cout << "The difference is " << subtraction(a,b) << "." << endl;
 
-	// The second way is to output it using cout
-	cout << "The difference is " << subtraction(a,b) << "." << endl;
-
-	return 0;
+return 0;
 }
 </code></pre>
 		</td>
 		</tr>
 	<tr class="table-content">
 		<td class="sub2">
-			<b><u>2. Split that function up into two parts! Prototype and definition!</u></b>
-			<br />
-			What I personally like to do is make all my functions like we have above with just 
-			declaring and defining my functions above main. 
-			<br />
-Once I have what I want working and everything is running smoothly. I now feel confident enough to split that function into two parts
-i. Prototypes stay above main, so that the computer/program know that this function exists
-ii. Definition goes under main once your prototype is done
-So what I do in this case is 
-a. Copy the function you have above main entirely and put it under main, boom you now have your function definition!
+<b><u>2. Split that function up into two parts! Prototype and definition!</u></b>
+<br />
+What I personally like to do is make all my 
+functions like we have above with just 
+declaring and defining my functions above main. 
+<br />
+Once I have what I want working and everything is 
+running smoothly. I now feel confident enough to 
+split that function into two parts:
+<br />
+<ul>
+	<li>
+i. Prototypes stay above main, so that the computer/
+program know that this function exists
+</li>
+<li>
+ii. Definition goes under main once your prototype 
+is done
+</li>
+</ul>
+<br />
+So what I do in this case is :
+<br />
+<ul>
+	<li>
+a. Copy the function you have above main entirely 
+and put it under main, boom you now have your 
+function definition!
+</li>
+<li>
 b. Copy only the "header" part of the function for your prototype. This includes the datatype, function name, and parameters
+</li>
+</ul>
+<br />
 This is what it should look like once that happens:
 </td>
 <tr>
@@ -761,28 +804,27 @@ using namespace std;
 int subtraction(int x, int y) ; // FUNCTION PROTOTYPE
 
 int main() {
+int a = 10;
+int b = 5;
+  
+//There are two ways we can call this function and 
+// get the value it calculates without passing by reference 
+// (we can talk about that later)
+// The first way is to store it in another variable
+int result = subtraction(a,b);
+// result will store the vale the subtraction 
+//function returns once the program hits this line 
+// and calls the function subtraction
 
-	int a = 10;
-	int b = 5;
-	  
-	//There are two ways we can call this function and 
-	// get the value it calculates without passing by reference 
-	// (we can talk about that later)
-	// The first way is to store it in another variable
-	int result = subtraction(a,b);
-	// result will store the vale the subtraction 
-	//function returns once the program hits this line 
-	// and calls the function subtraction
+// The second way is to output it using cout
+cout << "The difference is " << subtraction(a,b) << "." << endl;
 
-	// The second way is to output it using cout
-	cout << "The difference is " << subtraction(a,b) << "." << endl;
-
-	return 0;
+return 0;
 }
 
 // FUNCTION DEFINITION
 int subtraction(int x, int y) { 
-	return x - y;
+return x - y;
 }
 
 </code></pre>
@@ -827,7 +869,7 @@ So visually you will have three files that look something like this:
 <tr>
 	<td class="sub">
 <pre><code class="cpp">
-------------------------------main.cpp----------------------------
+-------------------main.cpp------------------------
 #include < iostream >
 using namespace std;
 
@@ -837,25 +879,24 @@ using namespace std;
 // directives so it can use them for their prototypes
 
 int main() {
+int a = 10;
+int b = 5;
+  
+//There are two ways we can call this function and get the value it calculates 
+//without passing by reference (we can talk about that later)
+// The first way is to store it in another variable
+int result = subtraction(a,b);
+// result will store the vale the subtraction function returns once the 
+//program hits this line and calls the function subtraction
 
-	int a = 10;
-	int b = 5;
-	  
-	//There are two ways we can call this function and get the value it calculates 
-	//without passing by reference (we can talk about that later)
-	// The first way is to store it in another variable
-	int result = subtraction(a,b);
-	// result will store the vale the subtraction function returns once the 
-	//program hits this line and calls the function subtraction
+// The second way is to output it using cout
+cout << "The difference is " << subtraction(a,b) << "." << endl;
 
-	// The second way is to output it using cout
-	cout << "The difference is " << subtraction(a,b) << "." << endl;
-
-	return 0;
+return 0;
 }
----------------------------------------------------------------------
+-----------------------------------------------------
 
-----------------------------calculator.h-----------------------------
+-------------------calculator.h----------------------
 // PROJECTNAME_HEADERFILENAME_H will be automatically generated 
 // for you when you create your header file in CLION
 #ifndef PROJECTNAME_HEADERFILENAME_H 
@@ -864,9 +905,9 @@ int main() {
 int subtraction(int x, int y) ; // FUNCTION PROTOTYPE
 
 #endif // PROJECTNAME_HEADERFILENAME_H
---------------------------------------------------------------------
+-----------------------------------------------------
 
----------------------------calculator.cpp---------------------------
+---------------------calculator.cpp------------------
 #include < iostream >
 // we need to add the same libraries we have in our
 //  main.cpp so we can keep our calculations going
@@ -880,13 +921,19 @@ using namespace std;
 int subtraction(int x, int y) { 
 	return x - y;
 }
-----------------------------------------------------------------------
-
+----------------------------------------------------
+</code></pre>
+<tr class="table-content">
+	<td class="main">
 <b><center>
 Now when you run this code, it should work as if the entire time 
 all you had was this:
 </center></b>
----------------------------------------------------------------------
+</td>
+</tr>
+<tr>
+	<td class="sub">
+		<pre><code class="cpp">
 #include< iostream >
 using namespace std;
 
@@ -898,17 +945,279 @@ int main() {
 
 	return 0;
 }
----------------------------------------------------------------------
-</center>
 </code></pre>
 		</td>
 		</tr>
 	</tbody>
 </table>
+
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Algorithms - Min/Max
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				This finds the Min/Max value in an array, but does not sort them
+			</td>
+		</tr>
+		<tr>
+			<td class="sub2">
+				Pseudocode
+				<ul>
+					<li>
+				Store the first value of the array as our current min/max</li>
+<b>For every element in the array</b>
+<li>Min – if an element is smaller than our current min, then that element is our new min</li>
+<li>Max - If an element is larger than our current max, then that element is our new max</li>
+</ul>
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+#include < iostream >
+using namespace std;
+
+const int SIZE = 10;
+
+// Not passing the array by reference cause we
+// are returning a found value
+// and not altering the array
+int findMin(int arr[], int arraySize) {
+    // grab the first value by default to have
+    // something to compare against
+    int currentMinimum = arr[0];
+    for (int i = 0; i < arraySize; i++) {
+        // compare that value to every value
+        // in the array
+        if (arr[i] < currentMinimum) {
+            // grab the new smallest value
+            currentMinimum = arr[i];
+        }
+    }
+    // return the smallest value
+    return currentMinimum;
+}
+
+int findMax(int arr[], int arraySize) {
+    // grab the first value by default to have
+    // something to compare against
+    int currentMaximum = arr[0];
+    for (int i = 0; i < arraySize; i++) {
+        // compare that value to every value
+        // in the array
+        if (arr[i] > currentMaximum) {
+            // grab the new largest value
+            currentMaximum = arr[i];
+        }
+    }
+    // return the largest value
+    return currentMaximum;
+}
+
+
+int main() {
+                    //index  :  0 1 2 3 4 5 6 7 8 9 
+int unsortedArray[SIZE] = {7,7,4,3,5,2,1,3,4,9};
+
+cout << "The minimum value is : " << findMin(unsortedArray,SIZE) << endl;
+cout << "The maximum value is : " << findMax(unsortedArray,SIZE) << endl;
+
+
+return 0;
+}
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Algorithms - Sorted Array
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				Sorting them means you will be able to search faster!
+			</td>
+		</tr>
+		<tr>
+			<td class="sub2">
+				Pseudocode
+				<ul>
+				<li>Find the minimum value, swap with the 1st position</li>
+				<li>Find the next minimum value, swap in the 2nd position</li>
+				<li>Continue until you have found the second to largest value and swapped in the second to last position</li>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+#include < iostream >
+using namespace std;
+
+const int SIZE = 10;
+
+void selectionSort(int arr[], int arraySize) {
+    int temp;
+    // After we find the smallest element and 
+    // put it in the first position
+    // 1 element is sorted
+    // N-1 elements are unsorted
+    for (int i = 0; i < arraySize-1; i++) {
+		for (int j = i+1; j < arraySize; j++) {
+		    // find min value, swap with 1st position
+		    // find next min value, swap wth 2nd position
+			if (arr[i] > arr[j]) {
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+    }
+}
+
+void printArray(const int arr[], int arraySize) {
+    cout << " { ";
+    for (int i = 0; i < arraySize; i++ ) {
+        cout << arr[i];
+        if (i < arraySize - 1) {
+            cout <<", ";
+        }
+    }
+    cout << " }" << endl;
+}
+
+int main() {
+	               //index  :  0 1 2 3 4 5 6 7 8 9 
+	int unsortedArray[SIZE] = {7,7,4,3,5,2,1,3,4,9};
+
+	//NOW SORT THE ARRAY
+	selectionSort(unsortedArray,SIZE);
+	cout << "The sorted array is : ";
+	printArray(unsortedArray,SIZE);
+
+	return 0;
+}
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table id="education">
+	<thead>
+		<tr>
+			<td>
+				Algorithms - Binary Search
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="sub">
+				Binary Searches must use arrays/vectors that are already sorted from min value to max value
+			</td>
+		</tr>
+		<tr class="table-content">
+			<td class="main">
+				<pre>
+					<code class="cpp">
+#include< iostream >
+
+using namespace std;
+
+const int N = 5;
+/* Function to print an array */
+void printArray(const int arr[], int n)
+{
+    for (int i=0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+// A recursive binary search function. It returns 
+// location of x in given array arr[l..r] is present, 
+// otherwise -1
+int binarySearch(int arr[], int l, int r, int x)
+{
+   // if ending element is greater or equal to starting
+   if (r >= l)
+   {
+       // grab the mid point between starting and ending
+       // l = 0, r = 4 
+       // 0 + (4 - 0) /2
+       // 0 + 4/2 --> 0 + 2
+       // mid = 2
+        int mid = l + (r - l)/2;
+ 
+        // If the element is present at the middle 
+        // itself
+        if (arr[mid] == x)  
+            return mid;
+ 
+        // If element is smaller than mid, then 
+        // it can only be present in left subarray
+        if (arr[mid] > x) 
+            return binarySearch(arr, l, mid-1, x);
+ 
+        // Else the element can only be present
+        // in right subarray
+        return binarySearch(arr, mid+1, r, x);
+   }
+ 
+   // We reach here when element is not 
+   // present in array
+   return -1;
+}  
+ 
+
+int main() {
+    // already sorted array
+    int searchMe[N] = {2, 3, 4, 10, 40};
+    // value we are looking for
+    int x = 10;
+    
+    printArray(searchMe, N);
+    
+    // pass array, starting index, 
+    //ending index, and value we are looking for
+    int result = binarySearch(searchMe, 0, N-1, x);
+    
+    cout << "The value is in index: " << result << endl;
+    
+    return 0;
+}
+			</code></pre>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<!-----FOOTER------>
 <table>
 	<tr class="table-content">
-		<td class="main">
-			<center> You are Enough </center>
+		<td class="sub2">
+			<center> Do Not Let What You Cannot Do Interfere With What You Can Do </center>
 		</td>
 	</tr>
-</table>
+</table>s
