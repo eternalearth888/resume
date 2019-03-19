@@ -712,12 +712,12 @@ int main() {
 int a = 10;
 int b = 5;
   
-//There are two ways we can call this function and get the value it calculates 
-without passing by reference (we can talk about that later)
+//There are two ways we can call this function and get the value it 
+// calculateswithout passing by reference (we can talk about that later)
 // The first way is to store it in another variable
 int result = subtraction(a,b);
 // result will store the vale the subtraction function returns once the program 
-hits this line and calls the function subtraction
+//hits this line and calls the function subtraction
 
 
 // The second way is to output it using cout
@@ -732,7 +732,9 @@ return 0;
 		<td class="sub2">
 			<b><u>2. Split that function up into two parts! Prototype and definition!</u></b>
 			<br />
-			What I personally like to do is make all my functions like we have above with just declaring and defining my functions above main. 
+			What I personally like to do is make all my functions like we have above with just 
+			declaring and defining my functions above main. 
+			<br />
 Once I have what I want working and everything is running smoothly. I now feel confident enough to split that function into two parts
 i. Prototypes stay above main, so that the computer/program know that this function exists
 ii. Definition goes under main once your prototype is done
@@ -755,13 +757,13 @@ int a = 10;
 int b = 5;
   
 //There are two ways we can call this function and 
-get the value it calculates without passing by reference 
-(we can talk about that later)
+// get the value it calculates without passing by reference 
+// (we can talk about that later)
 // The first way is to store it in another variable
 int result = subtraction(a,b);
 // result will store the vale the subtraction 
-function returns once the program hits this line and calls the function 
-subtraction
+//function returns once the program hits this line 
+// and calls the function subtraction
 
 // The second way is to output it using cout
 cout << "The difference is " << subtraction(a,b) << "." << endl;
@@ -769,7 +771,8 @@ cout << "The difference is " << subtraction(a,b) << "." << endl;
 return 0;
 }
 
-int subtraction(int x, int y) { // FUNCTION DEFINITION
+// FUNCTION DEFINITION
+int subtraction(int x, int y) { 
 return x - y;
 }
 
@@ -820,21 +823,22 @@ So visually you will have three files that look something like this:
 	#include < iostream >
 	using namespace std;
 
-	#include "calculator.h" // this is now symbolic,
-	 this tells the computer that all the function prototypes are in this file
+	#include "calculator.h" // <---this is now symbolic,
+	// this tells the computer that all the function prototypes are in this file
 	// it MUST come after all the libraries/preprocessing 
-	directives so it can use them for their prototypes
+	// directives so it can use them for their prototypes
+	
 	int main() {
 
 	int a = 10;
 	int b = 5;
 	  
 	//There are two ways we can call this function and get the value it calculates 
-	without passing by reference (we can talk about that later)
+	//without passing by reference (we can talk about that later)
 	// The first way is to store it in another variable
 	int result = subtraction(a,b);
 	// result will store the vale the subtraction function returns once the 
-	program hits this line and calls the function subtraction
+	//program hits this line and calls the function subtraction
 
 	// The second way is to output it using cout
 	cout << "The difference is " << subtraction(a,b) << "." << endl;
@@ -844,8 +848,9 @@ So visually you will have three files that look something like this:
 	---------------------------------------------------------------------
 
 	----------------------------calculator.h-----------------------------
-	#ifndef PROJECTNAME_HEADERFILENAME_H // PROJECTNAME_HEADERFILENAME_H will be 
-	automatically generated for you when you create your header file in CLION
+	// PROJECTNAME_HEADERFILENAME_H will be automatically generated 
+	// for you when you create your header file in CLION
+	#ifndef PROJECTNAME_HEADERFILENAME_H 
 	#define  PROJECTNAME_HEADERFILENAME_H
 
 	int subtraction(int x, int y) ; // FUNCTION PROTOTYPE
@@ -855,11 +860,12 @@ So visually you will have three files that look something like this:
 
 	---------------------------calculator.cpp---------------------------
 	#include < iostream >
-	// we need to add the same libraries we have in our main.cpp so we can keep
-	 our calculations going
+	// we need to add the same libraries we have in our
+	//  main.cpp so we can keep our calculations going
 	using namespace std; 
 
-	// we need to include the header file so it knows where it's prototypes are
+	// we need to include the header file so it 
+	// knows where it's prototypes are
 	#include "calculator.h" 
 
 	// FUNCTION DEFINITION
