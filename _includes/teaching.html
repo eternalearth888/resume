@@ -818,79 +818,78 @@ So visually you will have three files that look something like this:
 <tr>
 	<td class="sub">
 <pre><code class="cpp">
+------------------------------main.cpp----------------------------
+#include < iostream >
+using namespace std;
 
-	------------------------------main.cpp----------------------------
-	#include < iostream >
-	using namespace std;
+#include "calculator.h" // <---this is now symbolic,
+// this tells the computer that all the function prototypes are in this file
+// it MUST come after all the libraries/preprocessing 
+// directives so it can use them for their prototypes
 
-	#include "calculator.h" // <---this is now symbolic,
-	// this tells the computer that all the function prototypes are in this file
-	// it MUST come after all the libraries/preprocessing 
-	// directives so it can use them for their prototypes
-	
-	int main() {
+int main() {
 
-	int a = 10;
-	int b = 5;
-	  
-	//There are two ways we can call this function and get the value it calculates 
-	//without passing by reference (we can talk about that later)
-	// The first way is to store it in another variable
-	int result = subtraction(a,b);
-	// result will store the vale the subtraction function returns once the 
-	//program hits this line and calls the function subtraction
+int a = 10;
+int b = 5;
+  
+//There are two ways we can call this function and get the value it calculates 
+//without passing by reference (we can talk about that later)
+// The first way is to store it in another variable
+int result = subtraction(a,b);
+// result will store the vale the subtraction function returns once the 
+//program hits this line and calls the function subtraction
 
-	// The second way is to output it using cout
-	cout << "The difference is " << subtraction(a,b) << "." << endl;
+// The second way is to output it using cout
+cout << "The difference is " << subtraction(a,b) << "." << endl;
 
-	return 0;
-	}
-	---------------------------------------------------------------------
+return 0;
+}
+---------------------------------------------------------------------
 
-	----------------------------calculator.h-----------------------------
-	// PROJECTNAME_HEADERFILENAME_H will be automatically generated 
-	// for you when you create your header file in CLION
-	#ifndef PROJECTNAME_HEADERFILENAME_H 
-	#define  PROJECTNAME_HEADERFILENAME_H
+----------------------------calculator.h-----------------------------
+// PROJECTNAME_HEADERFILENAME_H will be automatically generated 
+// for you when you create your header file in CLION
+#ifndef PROJECTNAME_HEADERFILENAME_H 
+#define  PROJECTNAME_HEADERFILENAME_H
 
-	int subtraction(int x, int y) ; // FUNCTION PROTOTYPE
+int subtraction(int x, int y) ; // FUNCTION PROTOTYPE
 
-	#endif // PROJECTNAME_HEADERFILENAME_H
-	--------------------------------------------------------------------
+#endif // PROJECTNAME_HEADERFILENAME_H
+--------------------------------------------------------------------
 
-	---------------------------calculator.cpp---------------------------
-	#include < iostream >
-	// we need to add the same libraries we have in our
-	//  main.cpp so we can keep our calculations going
-	using namespace std; 
+---------------------------calculator.cpp---------------------------
+#include < iostream >
+// we need to add the same libraries we have in our
+//  main.cpp so we can keep our calculations going
+using namespace std; 
 
-	// we need to include the header file so it 
-	// knows where it's prototypes are
-	#include "calculator.h" 
+// we need to include the header file so it 
+// knows where it's prototypes are
+#include "calculator.h" 
 
-	// FUNCTION DEFINITION
-	int subtraction(int x, int y) { 
-	return x - y;
-	}
-	----------------------------------------------------------------------
+// FUNCTION DEFINITION
+int subtraction(int x, int y) { 
+return x - y;
+}
+----------------------------------------------------------------------
 
 <b><center>
 Now when you run this code, it should work as if the entire time 
 all you had was this:
 </center></b>
-	---------------------------------------------------------------------
-	#include< iostream >
-	using namespace std;
+---------------------------------------------------------------------
+#include< iostream >
+using namespace std;
 
-	int main() {
-	int a = 10;
-	int b = 5;
+int main() {
+int a = 10;
+int b = 5;
 
-	cout << "The difference between a and b is " << a-b << endl;
+cout << "The difference between a and b is " << a-b << endl;
 
-	return 0;
-	}
-	---------------------------------------------------------------------
+return 0;
+}
+---------------------------------------------------------------------
 </center>
 </code></pre>
 		</td>
