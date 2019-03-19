@@ -88,6 +88,15 @@ puppies *= 5; // five times as many puppies!
 
 int example = maleDogs / femaleDogs; // why does this yield 1?
 example = 0 % maleDogs; // 0 % anything is always 0
+
+int x = 5;
+int y = 2;
+
+y = 2 + x++;  // first evaluate the expression, then increment the x
+
+VERSUS
+
+y = ++x + 2; // first increment the x, then evaluate the expression
 			</code></pre>
 			</td>
 		</tr>
