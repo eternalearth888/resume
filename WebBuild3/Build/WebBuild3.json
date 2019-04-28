@@ -1,6 +1,6 @@
 {
-"companyName": "DefaultCompany",
-"productName": "UnityPrototype",
+"companyName": "teamPokemon",
+"productName": "SpaceOut",
 "dataUrl": "WebBuild3.data.unityweb",
 "wasmCodeUrl": "WebBuild3.wasm.code.unityweb",
 "wasmFrameworkUrl": "WebBuild3.wasm.framework.unityweb",
